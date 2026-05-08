@@ -1,141 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Ivan Nikitin</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="https://github.com/Apolexian" class="link"
-          >GitHub</a
-        >
-      </h3>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="☆ Symboli Rudolf Shrine ☆ The Emperor of the Turf ☆ シンボリルドルフ ☆" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=UnifrakturMaguntia&family=VT323&family=Bungee+Shade&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>☆ SYMBOLI RUDOLF SHRINE ☆ 皇帝 ☆ THE EMPEROR</title>
+</head>
+<body>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
-        </ul>
+<!-- STARFIELD -->
+<div class="starfield" aria-hidden="true">
+  <div class="stars stars--1"></div>
+  <div class="stars stars--2"></div>
+  <div class="stars stars--3"></div>
+</div>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+<!-- CURSOR TRAIL CANVAS -->
+<canvas id="trail" aria-hidden="true"></canvas>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
+<!-- ═══════ HEADER ═══════ -->
+<header class="shrine-header">
+  <div class="crown">♛</div>
+  <h1 class="title-main">
+    <span class="title-jp">シンボリルドルフ</span>
+    <span class="title-en">S Y M B O L I &nbsp; R U D O L F</span>
+    <span class="title-epithet">☆ 皇帝 — THE EMPEROR ☆</span>
+  </h1>
+  <div class="crown">♛</div>
+</header>
 
-    <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Ivan</span></h1>
-        <p class="about__desc">
-          Glasgow based software engineer working at Motorola Solutions.
-          I am part of the cloud services team for <a href="https://www.motorolasolutions.com/en_us/products/command-center-software/public-safety-software/field-response-and-reporting/commandcentralresponder.html">CommandCentral Responder</a> - a public safety mobile CAD application for police first responders.
-          Fan of minature model painting, playing guitar and video games.
-        </p>
+<!-- ═══════ MARQUEE ZONE ═══════ -->
+<div class="marquee-strip marquee-strip--gold">
+  <div class="marquee-content">
+    <span>★ Triple Crown Champion ★ 7 G1 Victories ★ Hall of Fame 1987 ★ 皇帝 ★ Undefeated Triple Crown ★ Japan Cup Winner ★ Arima Kinen x2 ★ The Emperor of the Turf ★ シンボリルドルフ ★&nbsp;</span>
+    <span>★ Triple Crown Champion ★ 7 G1 Victories ★ Hall of Fame 1987 ★ 皇帝 ★ Undefeated Triple Crown ★ Japan Cup Winner ★ Arima Kinen x2 ★ The Emperor of the Turf ★ シンボリルドルフ ★&nbsp;</span>
+  </div>
+</div>
 
-        <div class="about__contact center">
-          <a href="Resume.pdf">
-            <span class="btn btn--outline">CV</span>
-          </a>
-          <a href="mailto:ivan@niktivan.org">
-          <span class="btn btn--outline">Email me</span>
-        </a>
+<!-- ═══════ WELCOME PANEL ═══════ -->
+<section class="welcome-panel">
+  <div class="bevel-box">
+    <h2 class="rainbow-text">W E L C O M E&ensp;T O&ensp;M Y&ensp;S H R I N E</h2>
+    <p class="welcome-msg">
+      You have entered the <strong>ULTIMATE</strong> fan page dedicated to the one and only
+      <em>Symboli Rudolf</em> — 皇帝, The Emperor!<br>
+      Named after Rudolf&nbsp;I of Germany, this legendary Umamusume dominated the turf
+      with an undefeated Triple Crown and a record that echoes through eternity. 🌙
+    </p>
+    <p class="blink-text">☆ You are visitor #<span id="visitor-count">48,291</span> ☆</p>
+    <div class="under-construction">
+      <span>🚧</span> UNDER CONSTRUCTION <span>🚧</span>
+    </div>
+  </div>
+</section>
 
+<!-- ═══════ SPINNING MOON DIVIDER ═══════ -->
+<div class="divider-moons" aria-hidden="true">
+  <span>☽</span><span>✦</span><span>☾</span><span>✦</span><span>☽</span><span>✦</span><span>☾</span><span>✦</span><span>☽</span><span>✦</span><span>☾</span>
+</div>
+
+<!-- ═══════ GALLERY — THE DIZZYING PART ═══════ -->
+<section class="gallery-section">
+  <h2 class="section-heading">
+    <span class="heading-deco">═══════</span>
+    ★ THE IMPERIAL GALLERY ★
+    <span class="heading-deco">═══════</span>
+  </h2>
+
+  <div class="gallery-orbit" id="gallery-orbit">
+    <!-- Ring 1: outer orbit -->
+    <div class="orbit-ring orbit-ring--1">
+      <div class="gallery-card card--tilt-1">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="1"><img src="1.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 1</span>
+            <span class="placeholder-hint">Replace with your image</span>
+          </div>
+          <div class="card-caption">Race Day Glory</div>
         </div>
       </div>
-
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Some work I have done</h2>
-
-        <div class="projects__grid">
-          <div class="project">
-            <h3>TCP-ST</h3>
-            <p class="project__description">
-              A session-type based implementation the core TCP state machine in Rust.
-              I have also worked on and supervised on an extension of this work that was published in the proceedings of PLACES2024.
-              <a href="https://arxiv.org/abs/2404.05478">Check out that paper here.</a>
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Rust</li>
-              <li class="project__stack-item">Concurrency</li>
-              <li class="project__stack-item">Type Theory</li>
-            </ul>
-
-            <a
-              href="https://github.com/Apolexian/tcpst"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
+      <div class="gallery-card card--tilt-2">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="2"><img src="2.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 2</span>
+            <span class="placeholder-hint">Replace with your image</span>
           </div>
-
-          <div class="project">
-            <h3>Strong-Visualise</h3>
-            <p class="project__description">
-              Web-app that reads the data exported from the Strong weightlift tracking app and visualises the data.
-              Created to give myself and others a visualise representation and guide to lifting.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">Python - Flask</li>
-              <li class="project__stack-item">React</li>
-              <li class="project__stack-item">Docker</li>
-            </ul>
-
-            <a
-              href="https://github.com/Apolexian/strong-visualise"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://main--whimsical-lebkuchen-18f568.netlify.app/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
+          <div class="card-caption">The Emperor Arrives</div>
         </div>
-      </section>
-
-    </main>
-    <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
+      </div>
+      <div class="gallery-card card--tilt-3">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="3"><img src="3.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 3</span>
+            <span class="placeholder-hint">Replace with your image</span>
+          </div>
+          <div class="card-caption">Triple Crown</div>
+        </div>
+      </div>
+      <div class="gallery-card card--tilt-4">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="4"><img src="4.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 4</span>
+            <span class="placeholder-hint">Replace with your image</span>
+          </div>
+          <div class="card-caption">Moonlit Dignity</div>
+        </div>
+      </div>
     </div>
+
+    <!-- Ring 2: inner orbit (counter-rotate) -->
+    <div class="orbit-ring orbit-ring--2">
+      <div class="gallery-card card--tilt-5">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="5"><img src="5.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 5</span>
+            <span class="placeholder-hint">Replace with your image</span>
+          </div>
+          <div class="card-caption">Student Council</div>
+        </div>
+      </div>
+      <div class="gallery-card card--tilt-6">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="6"><img src="6.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 6</span>
+            <span class="placeholder-hint">Replace with your image</span>
+          </div>
+          <div class="card-caption">Tracen Academy</div>
+        </div>
+      </div>
+      <div class="gallery-card card--tilt-7">
+        <div class="card-inner">
+          <div class="img-placeholder" data-slot="7"><img src="7.webp" alt="Symboli Rudolf">
+            <span class="placeholder-label">IMAGE 7</span>
+            <span class="placeholder-hint">Replace with your image</span>
+          </div>
+          <div class="card-caption">皇帝の威厳</div>
+        </div>
+      </div>
     </div>
 
-    <script src="./script.js"></script>
-  </body>
+    <!-- Center piece -->
+    <div class="orbit-center">
+      <div class="center-emblem">
+        <span class="emblem-moon">☽</span>
+        <span class="emblem-text">皇帝</span>
+        <span class="emblem-moon">☾</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ MARQUEE 2 ═══════ -->
+<div class="marquee-strip marquee-strip--purple">
+  <div class="marquee-content marquee-content--reverse">
+    <span>☾ 1981-2011 ☽ Forever The Emperor ☾ 皇帝 ☽ Record: 13-1-1 ☾ Earnings: ¥684,824,200 ☽ Crescent Moon ☾ Luna ☽ Hall of Fame ☾&nbsp;</span>
+    <span>☾ 1981-2011 ☽ Forever The Emperor ☾ 皇帝 ☽ Record: 13-1-1 ☾ Earnings: ¥684,824,200 ☽ Crescent Moon ☾ Luna ☽ Hall of Fame ☾&nbsp;</span>
+  </div>
+</div>
+
+<!-- ═══════ SCATTERED GALLERY (the truly chaotic part) ═══════ -->
+<section class="scatter-section">
+  <h2 class="section-heading">
+    <span class="heading-deco">═══════</span>
+    ★ SCATTERED TREASURES ★
+    <span class="heading-deco">═══════</span>
+  </h2>
+
+  <div class="scatter-field">
+    <div class="scatter-card scatter--pos-1">
+      <div class="img-placeholder" data-slot="8"><img src="8.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 8</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-2">
+      <div class="img-placeholder" data-slot="9"><img src="9.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 9</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-3">
+      <div class="img-placeholder" data-slot="10"><img src="10.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 10</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-4">
+      <div class="img-placeholder" data-slot="11"><img src="11.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 11</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-5">
+      <div class="img-placeholder" data-slot="12"><img src="12.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 12</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-6">
+      <div class="img-placeholder" data-slot="13"><img src="13.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 13</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-7">
+      <div class="img-placeholder" data-slot="14"><img src="14.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 14</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+    <div class="scatter-card scatter--pos-8">
+      <div class="img-placeholder" data-slot="15"><img src="15.webp" alt="Symboli Rudolf">
+        <span class="placeholder-label">IMAGE 15</span>
+        <span class="placeholder-hint">Replace with your image</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══════ BOTTOM MARQUEE ═══════ -->
+<div class="marquee-strip marquee-strip--gold">
+  <div class="marquee-content">
+    <span>♛ LONG LIVE THE EMPEROR ♛ シンボリルドルフ ♛ LONG LIVE THE EMPEROR ♛ 皇帝 ♛ LONG LIVE THE EMPEROR ♛ シンボリルドルフ ♛&nbsp;</span>
+    <span>♛ LONG LIVE THE EMPEROR ♛ シンボリルドルフ ♛ LONG LIVE THE EMPEROR ♛ 皇帝 ♛ LONG LIVE THE EMPEROR ♛ シンボリルドルフ ♛&nbsp;</span>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
 </html>
