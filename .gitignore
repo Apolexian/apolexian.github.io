@@ -1,21 +1,16 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
-
-# Jekyll cache
-.jekyll-cache
+# 11ty output
 _site
 
-# RubyGems
-*.gem
-
-# NPM dependencies
+# NPM
 node_modules
 package-lock.json
 
-# IDE configurations
+# IDE
 .idea
 
-# Misc
-assets/js/dist
+# Legacy Jekyll
+.bundle
+vendor
+Gemfile.lock
+.jekyll-cache
+*.gem

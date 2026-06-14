@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <img class="page-banner-chibi" src="/assets/rudolf_chibi.webp" alt="" aria-hidden="true" width="52" height="64" />
+    <h1 class="post-title-big">{{ title }}</h1>
+  </div>
+</div>
+
+<div class="content">
+  <a class="back-link" href="/">← Back</a>
+  <div class="content-card">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>

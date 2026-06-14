@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: "Symboli Rudolf — 皇帝"
+description: "A fan blog about playing Symboli Rudolf in Umamusume Pretty Derby."
+---
+
+<div class="page">
+
+  {% if collections.posts.length == 0 %}
+  <p class="empty">No posts yet ♪</p>
+  {% else %}
+  <div class="post-feed reveal-stagger">
+    {% for post in collections.posts %}
+    <a class="post-card" href="{{ post.url }}">
+      {% if post.data.thumbnail %}
+      <img class="post-card-img" src="{{ post.data.thumbnail }}" alt="" width="640" height="360" {% if loop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} />
+      {% else %}
+      <div class="post-card-img post-card-img--empty" aria-hidden="true">
+        <img src="/assets/rudolf_chibi.webp" alt="" width="60" height="75" loading="lazy" />
+      </div>
+      {% endif %}
+      <span class="post-card-title">{{ post.data.title }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>
